@@ -32,8 +32,16 @@ define!($ u64 NonZeroU64);
 define!($ u128 NonZeroU128);
 define!($ usize NonZeroUsize);
 
+#[macro_export]
+macro_rules! nonzero {
+    ($expr:expr) => {
+        $crate::__private::nonzero_proc_macro::__nonzero!(crate = $crate; $expr)
+    };
+}
+
 /// Implementation detail, semver exempt
 #[doc(hidden)]
 pub mod __private {
     pub extern crate core;
+    pub use nonzero_proc_macro;
 }

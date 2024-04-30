@@ -1,9 +1,14 @@
-workspace = { members = ["nonzero-proc-macro"] }
 [package]
 name = "nonzero"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[workspace]
+members = ["nonzero-proc-macro"]
+
+[features]
+default = ["macros"]
+macros = ["dep:nonzero-proc-macro"]
 
 [dependencies]
+nonzero-proc-macro = { version = "0.1.0", path = "nonzero-proc-macro", optional = true }
