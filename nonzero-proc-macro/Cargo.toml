@@ -1,6 +1,5 @@
-workspace = { members = ["nonzero-proc-macro"] }
 [package]
-name = "nonzero"
+name = "nonzero-proc-macro"
 version = "0.1.0"
 edition = "2021"
 

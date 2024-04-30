@@ -5,3 +5,7 @@ version = 3
 [[package]]
 name = "nonzero"
 version = "0.1.0"
+
+[[package]]
+name = "nonzero-proc-macro"
+version = "0.1.0"
