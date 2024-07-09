@@ -2,6 +2,18 @@
 name = "non0"
 version = "0.1.0"
 edition = "2021"
+description = "Compile-time checked non-zero integers with type inference and first-class `const` support."
+license = "MIT OR Apache-2.0"
+homepage = "https://crates.io/crates/non0"
+documentation = "https://docs.rs/non0"
+repository = "https://github.com/aatifsyed/non0"
+categories = [
+    "rust-patterns",
+    "no-std::no-alloc",
+    "no-std",
+    "mathematics",
+    "data-structures",
+]
 
 [dependencies]
 zerocopy = { version = "0.7.32", default-features = false }
