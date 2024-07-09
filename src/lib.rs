@@ -15,6 +15,12 @@
 //! ```compile_fail
 //! let runtime = nonzero!(0); // eager evaluation
 //! ```
+//!
+//! # Comparison with other libraries
+//! - [`nonzero`](https://docs.rs/nonzero/latest/nonzero/) uses a proc-macro
+//!   that parses the expression passed to it, precluding
+//!   - Type inference.
+//!   - Referencing constants.
 
 #![no_std]
 
