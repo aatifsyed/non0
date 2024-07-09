@@ -1,7 +1,7 @@
 //! Compile-time checked non-zero integers with type inference and first-class `const` support.
 //!
 //! ```
-//! # use nonzero::nonzero;
+//! # use non0::nonzero;
 //! # use core::num::{NonZeroUsize, NonZeroI8};
 //! const UNSIGNED: NonZeroUsize = nonzero!(1);
 //! const SIGNED: NonZeroI8 = nonzero!(-1);
@@ -77,6 +77,15 @@ macro_rules! nonzero {
         };
         $crate::nonzero(&$expr)
     }};
+}
+
+/// Alias for [`nonzero!`].
+#[doc(hidden)]
+#[macro_export]
+macro_rules! non0 {
+    ($expr:expr) => {
+        $crate::nonzero!($expr)
+    };
 }
 
 /// You probably want the [`nonzero!`] macro instead.
